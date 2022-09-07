@@ -1,10 +1,12 @@
 class CreateQuaterReports < ActiveRecord::Migration[7.0]
   def change
     create_table :quater_reports do |t|
+      t.references :company, index: true, foreign_key: true
       t.string :quater
       t.string :start_date
       t.string :end_date
-      t.integer :earning_per_share
+      t.integer :equity
+      t.float :earning_per_share
       t.integer :share_out_standing
       t.integer :net_income
       t.integer :d_d_a_p

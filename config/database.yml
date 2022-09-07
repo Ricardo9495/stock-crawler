@@ -8,7 +8,8 @@ default: &default
   # adapter: sqlite3
   # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # timeout: 5000
-
+  ssl_mode: :disabled
+  sslverify: false
   adapter: mysql2  
   username: root  
   host: 127.0.0.1  
